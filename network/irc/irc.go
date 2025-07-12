@@ -26,8 +26,8 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/BotBotMe/botbot-bot/common"
-	"github.com/BotBotMe/botbot-bot/line"
+	"github.com/metabrainz/brainzbot-bot/common"
+	"github.com/metabrainz/brainzbot-bot/line"
 )
 
 const (
@@ -340,7 +340,9 @@ func (bot *ircBot) connect() (conn io.ReadWriteCloser) {
 	}
 }
 
-/* Check that the TLS connection's certficate can be applied to this connection.
+/*
+	Check that the TLS connection's certficate can be applied to this connection.
+
 Because irc.coldfront.net presents a certificate not as irc.coldfront.net, but as it's actual host (e.g. snow.coldfront.net),
 
 We do this by comparing the IP address of the certs name to the IP address of our connection.
@@ -856,14 +858,15 @@ func parseLine(data string) (*line.Line, error) {
 	return theLine, nil
 }
 
-/* Trims a string to not include junk such as:
-- the null bytes after a character return
-- \n and \r
-- whitespace
-- Ascii char \001, which is the extended data delimiter,
-  used for example in a /me command before 'ACTION'.
-  See http://www.irchelp.org/irchelp/rfc/ctcpspec.html
-- Null bytes: \000
+/*
+		Trims a string to not include junk such as:
+	  - the null bytes after a character return
+	  - \n and \r
+	  - whitespace
+	  - Ascii char \001, which is the extended data delimiter,
+	    used for example in a /me command before 'ACTION'.
+	    See http://www.irchelp.org/irchelp/rfc/ctcpspec.html
+	  - Null bytes: \000
 */
 func sane(data string) string {
 	parts := strings.SplitN(data, "\n", 2)

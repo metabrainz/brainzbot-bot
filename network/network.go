@@ -7,9 +7,9 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/BotBotMe/botbot-bot/common"
-	"github.com/BotBotMe/botbot-bot/line"
-	"github.com/BotBotMe/botbot-bot/network/irc"
+	"github.com/metabrainz/brainzbot-bot/common"
+	"github.com/metabrainz/brainzbot-bot/line"
+	"github.com/metabrainz/brainzbot-bot/network/irc"
 )
 
 type NetworkManager struct {

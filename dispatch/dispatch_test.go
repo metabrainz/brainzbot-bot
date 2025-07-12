@@ -1,8 +1,8 @@
 package dispatch
 
 import (
-	"github.com/BotBotMe/botbot-bot/common"
-	"github.com/BotBotMe/botbot-bot/line"
+	"github.com/metabrainz/brainzbot-bot/common"
+	"github.com/metabrainz/brainzbot-bot/line"
 	"testing"
 )
 

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/BotBotMe/botbot-bot/common"
 	"github.com/golang/glog"
+	"github.com/metabrainz/brainzbot-bot/common"
 )
 
 const (

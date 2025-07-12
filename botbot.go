@@ -7,11 +7,11 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/BotBotMe/botbot-bot/common"
-	"github.com/BotBotMe/botbot-bot/dispatch"
-	"github.com/BotBotMe/botbot-bot/line"
-	"github.com/BotBotMe/botbot-bot/network"
-	"github.com/BotBotMe/botbot-bot/user"
+	"github.com/metabrainz/brainzbot-bot/common"
+	"github.com/metabrainz/brainzbot-bot/dispatch"
+	"github.com/metabrainz/brainzbot-bot/line"
+	"github.com/metabrainz/brainzbot-bot/network"
+	"github.com/metabrainz/brainzbot-bot/user"
 )
 
 /*
@@ -117,8 +117,8 @@ func (bot *BotBot) mainLoop() {
 
 // Handle a command send from a plugin.
 // Current commands:
-//  - WRITE <chatbotid> <channel> <msg>: Send message to server
-//  - REFRESH: Reload plugin configuration
+//   - WRITE <chatbotid> <channel> <msg>: Send message to server
+//   - REFRESH: Reload plugin configuration
 func (bot *BotBot) handleCommand(cmd string, args string) {
 	if glog.V(2) {
 		glog.Infoln("HandleCommand:", cmd)
