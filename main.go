@@ -9,10 +9,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/BotBotMe/botbot-bot/common"
 	"github.com/golang/glog"
+	"github.com/metabrainz/brainzbot-bot/common"
 	_ "net/http/pprof"
-
 )
 
 const (

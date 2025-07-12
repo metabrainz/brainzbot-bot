@@ -1,9 +1,6 @@
-[![Build Status](https://img.shields.io/circleci/project/github/BotBotMe/botbot-bot.svg)](https://circleci.com/gh/BotBotMe/botbot-bot)
-
-
 The bot used in botbot.me is a Go (1.2+) program. To install:
 
-    go get github.com/BotBotMe/botbot-bot
+    go get github.com/metabrainz/brainzbot-bot
 
 External resources:
 

@@ -1,7 +1,7 @@
 package user
 
 import (
-	"github.com/BotBotMe/botbot-bot/line"
+	"github.com/metabrainz/brainzbot-bot/line"
 	"strings"
 )
 

@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/BotBotMe/botbot-bot/common"
-	"github.com/BotBotMe/botbot-bot/line"
 	"github.com/golang/glog"
+	"github.com/metabrainz/brainzbot-bot/common"
+	"github.com/metabrainz/brainzbot-bot/line"
 )
 
 var (
