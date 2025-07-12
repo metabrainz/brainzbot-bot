@@ -26,6 +26,8 @@ COPY ./docker/services/brainzbot-bot.service /etc/service/brainzbot-bot/run
 
 ENV PATH="/app:${PATH}"
 
+USER root
+
 ARG GIT_COMMIT_SHA
 LABEL org.label-schema.vcs-url="https://github.com/metabrainz/brainzbot-bot.git" \
       org.label-schema.vcs-ref="" \
