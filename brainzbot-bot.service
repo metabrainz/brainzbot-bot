@@ -1,0 +1,19 @@
+[Unit]
+Description=brainzbot irc bot
+After=network.target redis.service postgresql.service
+Requires=redis.service postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/www/brainzbot/brainzbot-bot
+EnvironmentFile=-/srv/www/brainzbot/brainzbot-bot/.env
+ExecStart=/srv/www/brainzbot/brainzbot-bot/brainzbot-bot
+Restart=always
+RestartSec=5s
+KillSignal=SIGINT
+TimeoutStopSec=15s
+
+[Install]
+WantedBy=multi-user.target
